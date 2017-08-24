@@ -316,6 +316,7 @@ detailed_block(unsigned char *x, int in_extension)
 	    if (strchr((char *)name, '\n')) {
 		name_descriptor_terminated = 1;
 		strcpy(tmp2, extract_string((char *)name, &has_valid_string_termination, 13));
+		strcpy ((char *)name, "");
 	    }
 	    return 1;
 	case 0xFD:
